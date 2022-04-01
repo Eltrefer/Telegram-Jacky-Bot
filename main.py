@@ -21,7 +21,7 @@ def reply(replyText):
     if replyText.chat.type == 'private':
 
 
-        if replyText.text == 'Parsing':
+        if replyText.text == 'Новая халява':
             message.Parsing(bot, replyText)
 
 
@@ -68,8 +68,8 @@ def reply(replyText):
         elif replyText.text == '5':
             sania.Zaeb(bot, replyText)
 
-        elif replyText.text == '111':
-            message.NewAnswer(bot, replyText)
+        # elif replyText.text == '111':
+        #     message.NewAnswer(bot, replyText)
 
 
         else:

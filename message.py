@@ -5,7 +5,7 @@ import random
 from parse360tech import Parse 
 
 def Parsing(bot, text):
-  bot.send_message(text.chat.id, Parse() )
+    bot.send_message(text.chat.id, Parse() )
 
 def PN(bot, text):
     bot.send_message(text.chat.id, (
@@ -16,11 +16,11 @@ def PN(bot, text):
     '\n-5 (лаб.) КТвПЭ a. 2-540 доц. Ковалев А. В. 15.05-16.30'), parse_mode='Markdown'
     )
 
-def NewAnswer(bot, text):
-    img = open('E:\Files\Screnshots\Screenshot_1.png', 'rb')
+# def NewAnswer(bot, text):
+#     img = open('E:\Files\Screnshots\Screenshot_1.png', 'rb')
 
-    bot.send_photo(text.chat.id, img)
-    bot.send_message(text.chat.id, "Товары для продажи\n#ItNetwork")
+#     bot.send_photo(text.chat.id, img)
+#     bot.send_message(text.chat.id, "Товары для продажи\n#ItNetwork")
 
 def Menu(bot, text):
 
@@ -33,7 +33,7 @@ def Menu(bot, text):
     types.KeyboardButton('Саня'),
     types.KeyboardButton('Random'),
     types.KeyboardButton('Аниме'),
-    types.KeyboardButton('Parsing'),
+    types.KeyboardButton('Новая халява'),
     types.KeyboardButton('Назад'))
 
     bot.send_message(text.chat.id, 'Понял', reply_markup=menu)
@@ -46,7 +46,7 @@ def start(bot, text):
     types.KeyboardButton('Меню'),
     types.KeyboardButton('Пока'))
 
-    sti = open('E:\Files\Py\JackyBOT\scr\AnimatedSticker_2.tgs', 'rb')
+    sti = open('./scr/AnimatedSticker_2.tgs', 'rb')
     bot.send_animation(text.chat.id, sti)
     bot.send_message(text.chat.id, 'Ну привет, сладкий'.format(text.from_user, bot.get_me()) , reply_markup=start)
 
@@ -66,7 +66,7 @@ def randomNumber(bot, text):
 
 
 def anime(bot, text):
-    animeShit = open('E:/Files/Py/JackyBOT/scr/Ded_musul.mp4', 'rb')
+    animeShit = open('./scr/Ded_musul.mp4', 'rb')
     bot.send_animation(text.chat.id, animeShit)
 
 
